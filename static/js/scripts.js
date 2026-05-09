@@ -40,7 +40,7 @@ var initPage = function() {
     countObj();
     initObj();
     // initMainMenu();
-    setTimeout(runEffect, 2000);
+    // setTimeout(runEffect, 2000); // Tắt hiệu ứng vòng lặp từng vị trí
 
     // $('.btnFile').bind('click', function(e) {
 
@@ -101,15 +101,14 @@ var initObj = function() {
     for (var i = 0; i < objArr.length; i++) {
         var obj = objArr[i];
 
-        obj.find('.body').css({ opacity: 0, marginTop: -100 });
-        obj.find('.body').delay(100 * i).animate({
-            opacity: 1,
-            marginTop: 0
-        }, 900, 'easeInOutElastic', function() {
-            // Animation complete.
-        });
+        // Hiện thị body ngay lập tức không cần delay
+        obj.find('.body').css({ opacity: 1, marginTop: 0 });
+        
+        // Luôn hiện icon pin (pop) cho tất cả vị trí
+        if (!obj.find('.pop').hasClass('active')) {
+            obj.find('.pop').addClass('active');
+        }
     }
-
 };
 
 var runEffect = function() {
