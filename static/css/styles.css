@@ -810,12 +810,12 @@ footer a:hover {
     z-index: 16;
 }
 
-.prlx-ctn .over:hover .typewriter {
+.prlx-ctn .over .typewriter {
     display: block;
 }
 
 .typewriter {
-    display: none;
+    display: block;
     margin-top: -130px;
     position: absolute;
     background: rgba(255,255,255,1);
@@ -841,14 +841,14 @@ footer a:hover {
 .title_tooltip:before {
     content: "";
     position: absolute;
-    top: 48%;
-    right: -8px;
+    bottom: -15px;
+    left: 80%; /* Positioned towards the right where buildings usually are relative to these tooltips */
     width: 0;
     height: 0;
-    border-top: 8px solid transparent;
-    border-left: 12px solid rgba(255, 255, 255, 1);
-    border-bottom: 8px solid transparent;
-    box-shadow: 0px 8px 16px rgba(130, 136, 160, 0.1);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid rgba(255, 255, 255, 1);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
 }
 .typewriter:before {
     content: "";
@@ -1524,6 +1524,9 @@ ul.tabs li.current {
     #floor-b5{
         margin-top:-5%;margin-left: -12%;
     }
+    #floor-b1{
+        margin-top:-12%;margin-left: -13%;
+    }
     #floor-vpmc{
         margin-top:20%;margin-left: 23%;
     }
@@ -1791,5 +1794,119 @@ ul.tabs li.current {
 @media (max-width: 320px) {
     .list4Items li {
         width: 23.8%;
+    }
+}
+
+/* Timeline Modal Styles */
+.dialog_timeline {
+    display: none;
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    top: 10%;
+    left: 15%;
+    z-index: 2000;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.dialog_timeline.active {
+    display: block;
+}
+
+.timeline_header {
+    background: linear-gradient(135deg, #E23C47 0%, #B02A33 100%);
+    color: white;
+    padding: 20px 30px;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timeline_content {
+    padding: 30px;
+    height: calc(100% - 74px);
+    overflow-y: auto;
+}
+
+.timeline_item {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline_item::before {
+    content: '';
+    position: absolute;
+    left: 110px;
+    top: 24px;
+    bottom: -20px;
+    width: 2px;
+    background: #EDF1F7;
+}
+
+.timeline_item:last-child::before {
+    display: none;
+}
+
+.timeline_time {
+    width: 100px;
+    font-weight: 600;
+    color: #E23C47;
+    font-size: 16px;
+    padding-top: 2px;
+}
+
+.timeline_dot {
+    width: 12px;
+    height: 12px;
+    background: #E23C47;
+    border-radius: 50%;
+    margin: 6px 15px 0 15px;
+    z-index: 1;
+}
+
+.timeline_desc {
+    flex: 1;
+    font-size: 16px;
+    color: #283352;
+    line-height: 1.5;
+}
+
+.black_bg_timeline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1999;
+    display: none;
+}
+
+.black_bg_timeline.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .dialog_timeline {
+        width: 90%;
+        left: 5%;
+        height: 85%;
+        top: 7.5%;
+    }
+    .timeline_item::before {
+        left: 80px;
+    }
+    .timeline_time {
+        width: 70px;
+        font-size: 14px;
+    }
+    .timeline_desc {
+        font-size: 14px;
     }
 }

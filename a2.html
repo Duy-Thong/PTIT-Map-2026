@@ -17,7 +17,7 @@
       <div class="menu-trangcon">
         <!-- DS tầng -->
         <div class="left-tang-trangcon">
-            <div class="container-tang current_tang" id="tang10" style="border-radius: 0px 20px 0px 0px;">Tầng 10</div>
+            <div class="container-tang" id="tang10" style="border-radius: 0px 20px 0px 0px;">Tầng 10</div>
             <div class="container-tang" id="tang9">Tầng 9</div>
             <div class="container-tang" id="tang8">Tầng 8</div>
             <div class="container-tang" id="tang7">Tầng 7</div>
@@ -26,7 +26,7 @@
             <div class="container-tang" id="tang4">Tầng 4</div>
             <div class="container-tang" id="tang3">Tầng 3</div>
             <div class="container-tang" id="tang2">Tầng 2</div>
-            <div class="container-tang" id="tang1">Tầng 1</div>
+            <div class="container-tang current_tang" id="tang1">Tầng 1</div>
             <div class="container-tang" id="tangg"style="border-radius: 0px 0px 20px 0px;">Tầng G</div>
         </div>
         <!-- Danh sách phòng -->
@@ -1154,11 +1154,11 @@
                 }
                 else{
                     if(id_tang==null){
-                        id_tang='tang10'
-                        $('.tang10').css( {'display': 'block'});
-                            $('#tang10').className='container-tang current_tang';
-                            $('.tongquantang10').css( {'display': 'flex'});
-                            $('#tongquantang10').addClass('current_phong');
+                        id_tang='tang1'
+                        $('.tang1').css( {'display': 'block'});
+                            $('#tang1').addClass('container-tang current_tang');
+                            $('.tongquantang1').css( {'display': 'flex'});
+                            $('#tongquantang1').addClass('current_phong');
                     }
                     else{
                         $(id_tang).css( {'display': 'block'});
@@ -1229,9 +1229,11 @@
                     if (!obj.find('.pop').hasClass('active')) {
                         obj.find('.pop').addClass('active');
                     }
+                    parent.window.$('.title_tooltip.'+class_list[3]).siblings('.effect').show();
                     setTimeout(function(){ 
                         localStorage.removeItem("key");
-                    }, 10);
+                        parent.window.$('.title_tooltip.'+class_list[3]).siblings('.effect').fadeOut();
+                    }, 5000);
                 }
         }
     }
@@ -1245,7 +1247,7 @@ $.ajaxSetup({ cache: false });
         var searchField = $('#input_search').val();
         if(searchField==""){
             current_search=0;
-            $('#result').append(' <div class="recommend_content" style="margin-top:12px"><div class="content-text 1 a2 tang9 khoa_cntt1" onclick="myFunction(this)"><div class="recommend_text ">Khoa Công nghệ thông tin</div>  </div> </div><div class="recommend_content"> <div class="content-text 1 a1 tang1 phong_gv" onclick="myFunction(this)"><div class="recommend_text">Phòng Giáo Vụ</div></div> </div><div class="recommend_content"><div class="content-text 1 a1 tang1 khoa_dpt" onclick="myFunction(this)">             <div class="recommend_text" >Khoa Đa phương tiện</div>  </div> </div>')
+            $('#result').append(' <div class="recommend_content" style="margin-top:12px"><div class="content-text 1 a2 tang1 tongquantang1" onclick="myFunction(this)"><div class="recommend_text ">Tòa nhà A2</div>  </div> </div><div class="recommend_content"><div class="content-text 1 a1 tang1 tongquantang1" onclick="myFunction(this)"><div class="recommend_text ">Tòa nhà A1</div>  </div> </div><div class="recommend_content"><div class="content-text 1 a2 tang9 khoa_cntt1" onclick="myFunction(this)"><div class="recommend_text ">Khoa Công nghệ thông tin</div>  </div> </div><div class="recommend_content"> <div class="content-text 1 a1 tang1 phong_gv" onclick="myFunction(this)"><div class="recommend_text">Phòng Giáo Vụ</div></div> </div><div class="recommend_content"><div class="content-text 1 a1 tang1 khoa_dpt" onclick="myFunction(this)">             <div class="recommend_text" >Khoa Đa phương tiện</div>  </div> </div>')
             return
         }
         var expression = new RegExp(searchField, "i");

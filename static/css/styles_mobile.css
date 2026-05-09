@@ -815,12 +815,12 @@ footer a:hover {
     z-index: 16;
 }
 
-.prlx-ctn .over:hover .typewriter {
+.prlx-ctn .over .typewriter {
     display: block;
 }
 
 .typewriter {
-    display: none;
+    display: block;
     margin-top: -130px;
     position: absolute;
     background: rgba(255,255,255,1);
@@ -846,14 +846,14 @@ footer a:hover {
 .title_tooltip:before {
     content: "";
     position: absolute;
-    top: 48%;
-    right: -8px;
+    bottom: -15px;
+    left: 80%;
     width: 0;
     height: 0;
-    border-top: 8px solid transparent;
-    border-left: 12px solid rgba(255, 255, 255, 1);
-    border-bottom: 8px solid transparent;
-    box-shadow: 0px 8px 16px rgba(130, 136, 160, 0.1);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid rgba(255, 255, 255, 1);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
 }
 .typewriter:before {
     content: "";
@@ -1526,6 +1526,9 @@ ul.tabs li.current {
     }
     #floor-b5{
         margin-top:-5%;margin-left: -12%;
+    }
+    #floor-b1{
+        margin-top:-12%;margin-left: -13%;
     }
     #floor-vpmc{
         margin-top:20%;margin-left: 23%;

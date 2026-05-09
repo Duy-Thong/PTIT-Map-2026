@@ -115,7 +115,7 @@
     position: absolute;
 }
 #floor-ttkn{
-    margin-top: -15%;
+    margin-top: -22%;
     margin-left: 6%;
 }
 #floor-hta2{
@@ -410,7 +410,7 @@
                     <div class="title-floor">
                         <div class="header-title-floor">Theo dõi lễ tốt nghiệp</div>
                     </div>
-                    <div class="des-foor">Vị trí: Tầng 1 nhà A2. Khu vực dành cho người thân theo dõi trực tiếp buổi lễ qua màn hình lớn.</div> 
+                    <div class="des-foor">Vị trí: Sảnh hội trường A2 và Tầng 1 nhà A2. Khu vực dành cho người thân theo dõi trực tiếp buổi lễ qua màn hình lớn. Ấn vào đây để xem chi tiết bản đồ tòa A2</div> 
                 </div>
                 <div class="pop">
                     <img class="btn-a2" src="./static/images/map/icon_place.svg">
@@ -561,7 +561,26 @@
                         <div class="header-title-floor">Chụp ảnh tốt nghiệp</div>
                     </div>
                     <div class="des-foor">
-                        Khu vực tòa nhà B5 và quảng trường xung quanh là địa điểm lý tưởng để lưu giữ những khoảnh khắc đẹp trong ngày lễ tốt nghiệp.
+                        Khu vực sân ký túc xá B5, sân thể dục trước căn tin là nơi lý tưởng để chụp ảnh kỉ niệm tốt nghiệp.
+                    </div>
+                </div>
+                <div class="pop">
+                    <img src="./static/images/map/icon_place.svg">
+                </div>
+                <div class="effect" style="display: none;">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="over people btnFile" id="floor-b1">
+                <div class="typewriter">
+                    <h6>Kí túc xá B1</h6>
+                </div>
+                <div class="title_tooltip ktx_b1" style="width: 380px;height: 200px">
+                    <div class="title-floor" style="margin-top:10px">
+                        <div class="header-title-floor">Kí túc xá B1</div>
+                    </div>
+                    <div class="des-foor">
+                        Kí túc xá B1 là khu nhà ở dành cho sinh viên Học viện, nằm phía sau khu B5. 
                     </div>
                 </div>
                 <div class="pop">
@@ -594,27 +613,7 @@
 
 
 
-            <div class="over people" id="right-slider" >
-                <div class="effect" style="display: none;">
-                    <span></span><span></span>
-                </div>
-                <!-- newsslide -->
-                <div class="body" style="opacity: 1; margin-top: 0px;">
-                    <ul class="owl-carousel newsSlider">   
-                        <li class="item btnFile">
-                            <img class="slider-map" src="./static/images/map/slider1.png"  >
-                        </li>
-                        <li class="item btnFile">
-                            <img class="slider-map" src="./static/images/map/slider2.png" >
-                        </li>
 
-                        <li class="item btnFile">
-                            <img class="slider-map" src="./static/images/map/slider3.png">
-                        </li>
-                    </ul>
-                    <img id="news" src="./static/images/map/tintuc.png" alt="News">
-                </div>
-            </div>
 
             <div class="over people" id="left-menu" >
                 <div class="effect" style="display: none;">
@@ -652,6 +651,10 @@
                                 <div class="content-child-trangcon">Dự lễ tốt nghiệp</div>
                             </div>
                             <div class="content-bottom">
+                                <div class="container-bottom" id="graduation_timeline">
+                                    <div class="content-text">Lịch trình buổi lễ</div>
+                                    <div class="line"></div>
+                                </div>
                                 <div class="container-bottom" id="graduation_parking">
                                     <div class="content-text">Gửi xe</div>
                                     <div class="line"></div>
@@ -746,6 +749,93 @@
                             </div>
                         </div>
                 </div>
+
+                <div class="dialog_timeline" id="dialog_timeline">
+                    <div class="timeline_header">
+                        <span>Lịch trình Buổi Lễ Tốt Nghiệp</span>
+                        <img style="cursor: pointer;width:24px;height:24px;" class="close_btn_timeline" src="./static/images/trangcon/close.svg" alt="">
+                    </div>
+                    <div class="timeline_content">
+                        <div style="font-weight: 600; font-size: 18px; color: #E23C47; margin-bottom: 20px;">Thứ Bảy, ngày 23/05 | 07:00 – 11:30 | Hội trường A2</div>
+                        
+                        <div class="timeline_item">
+                            <div class="timeline_time">07:00-08:00</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Đón tiếp học viên, sinh viên, người nhà. Ổn định hội trường</div>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="timeline_time">08:00-08:15</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Đón tiếp đại biểu</div>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="timeline_time">08:15-08:30</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Văn nghệ chào mừng</div>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="timeline_time">08:30-08:35</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Chào cờ, tuyên bố lý do, giới thiệu đại biểu</div>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="timeline_time">08:35-08:45</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Phát biểu chúc mừng của Lãnh đạo Học viện</div>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="timeline_time">08:45-08:50</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Công bố các quyết định cấp bằng tốt nghiệp và công nhận học vị</div>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="timeline_time">08:50-08:55</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Đại diện tân Tiến sĩ, Thạc sĩ tặng hoa Học viện</div>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="timeline_time">08:55-09:00</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Trao bằng cho các tân Tiến sĩ</div>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="timeline_time">09:00-09:15</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Trao bằng cho các tân Thạc sĩ</div>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="timeline_time">09:15-09:25</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Video tổng kết khoá học D21 khối các ngành kỹ thuật</div>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="timeline_time">09:25-09:30</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Đại diện tân Kỹ sư được nhận bằng phát biểu</div>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="timeline_time">09:30-09:40</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Nghi thức tri ân Nhà trường và Gia đình</div>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="timeline_time">09:40-09:50</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Trao bằng, giấy khen, kỷ niệm chương cho các tân kỹ sư ngành CNTT có thành tích cao trong học tập, rèn luyện.</div>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="timeline_time">09:50-11:30</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Trao bằng cho các tân Kỹ sư</div>
+                        </div>
+                        <div class="timeline_item">
+                            <div class="timeline_time">11:30</div>
+                            <div class="timeline_dot"></div>
+                            <div class="timeline_desc">Bế mạc.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="black_bg_timeline" id="black_bg_timeline"></div>
                 <div class="black_bg_clb"></div>
                 <img src="./static/images/map/bg-map.png" style="opacity: 0;">
             </div>
@@ -827,17 +917,7 @@
         }, 3000);
     };
 
-    // Slider tin tức
-    $('.newsSlider').owlCarousel({
-        nav:false,
-        dots:true,
-        loop: true,
-        autoplay: true,
-        autoplayHoverPause: true,
-        responsive:{
-            0:{ items:1 }
-        }
-    });
+
 // function tìm kiếm
 
 function myFunction(ele) {
@@ -865,9 +945,11 @@ function myFunction(ele) {
                         obj.find('.pop').addClass('active');
                     }
 
+                    $('.title_tooltip.'+class_list[3]).siblings('.effect').show();
                     setTimeout(function(){ 
                         localStorage.removeItem("key");
-                    }, 10);
+                        $('.title_tooltip.'+class_list[3]).siblings('.effect').fadeOut();
+                    }, 5000);
                 }
         }
     }
@@ -881,7 +963,7 @@ $.ajaxSetup({ cache: false });
         var searchField = $('#input_search').val();
         if(searchField==""){
             current_search=0;
-            $('#result').append(' <div class="recommend_content" style="margin-top:12px"><div class="content-text 1 a2 tang9 khoa_cntt1" onclick="myFunction(this)"><div class="recommend_text ">Khoa Công nghệ thông tin</div>  </div> </div><div class="recommend_content"> <div class="content-text 1 a1 tang1 phong_gv" onclick="myFunction(this)"><div class="recommend_text">Phòng Giáo Vụ</div></div> </div><div class="recommend_content"><div class="content-text 1 a1 tang1 khoa_dpt" onclick="myFunction(this)">             <div class="recommend_text" >Khoa Đa phương tiện</div>  </div> </div>')
+            $('#result').append(' <div class="recommend_content" style="margin-top:12px"><div class="content-text 1 a2 tang1 tongquantang1" onclick="myFunction(this)"><div class="recommend_text ">Tòa nhà A2</div>  </div> </div><div class="recommend_content"><div class="content-text 1 a1 tang1 tongquantang1" onclick="myFunction(this)"><div class="recommend_text ">Tòa nhà A1</div>  </div> </div><div class="recommend_content"><div class="content-text 0 _ ktx_b1" onclick="myFunction(this)"><div class="recommend_text ">Kí túc xá B1</div>  </div> </div><div class="recommend_content"><div class="content-text 0 _ vpd" onclick="myFunction(this)"><div class="recommend_text ">Kí túc xá B5</div>  </div> </div><div class="recommend_content"><div class="content-text 1 a2 tang9 khoa_cntt1" onclick="myFunction(this)"><div class="recommend_text ">Khoa Công nghệ thông tin</div>  </div> </div><div class="recommend_content"> <div class="content-text 1 a1 tang1 phong_gv" onclick="myFunction(this)"><div class="recommend_text">Phòng Giáo Vụ</div></div> </div><div class="recommend_content"><div class="content-text 1 a1 tang1 khoa_dpt" onclick="myFunction(this)">             <div class="recommend_text" >Khoa Đa phương tiện</div>  </div> </div>')
             return
         }
         var expression = new RegExp(searchField, "i");
@@ -902,7 +984,7 @@ $.ajaxSetup({ cache: false });
             let list_recommend=document.querySelectorAll(".recommend_content");
             if(list_recommend.length==0){
                 current_search=0;
-                $('#result').append('<div class="recommend_content no_result"style="height: 48px;" ><div class="content-text" style="background-color: white;color: #3366FF;"><div style="height: 32px;">Từ khoá tìm kiếm không phù hợp, vui lòng tìm theo gợi ý dưới đây!</div></div></div> <div class="recommend_content" style="margin-top:12px"><div class="content-text 1 a2 tang9 khoa_cntt1" onclick="myFunction(this)"><div class="recommend_text ">Khoa Công nghệ thông tin</div>  </div> </div><div class="recommend_content"> <div class="content-text 1 a1 tang1 phong_gv" onclick="myFunction(this)"><div class="recommend_text">Phòng Giáo Vụ</div></div> </div><div class="recommend_content"><div class="content-text 1 a1 tang1 khoa_dpt" onclick="myFunction(this)">             <div class="recommend_text" >Khoa Đa phương tiện</div>  </div> </div>')
+                $('#result').append('<div class="recommend_content no_result"style="height: 48px;" ><div class="content-text" style="background-color: white;color: #3366FF;"><div style="height: 32px;">Từ khoá tìm kiếm không phù hợp, vui lòng tìm theo gợi ý dưới đây!</div></div></div> <div class="recommend_content" style="margin-top:12px"><div class="content-text 1 a2 tang1 tongquantang1" onclick="myFunction(this)"><div class="recommend_text ">Tòa nhà A2</div>  </div> </div><div class="recommend_content"><div class="content-text 1 a1 tang1 tongquantang1" onclick="myFunction(this)"><div class="recommend_text ">Tòa nhà A1</div>  </div> </div><div class="recommend_content"><div class="content-text 0 _ ktx_b1" onclick="myFunction(this)"><div class="recommend_text ">Kí túc xá B1</div>  </div> </div><div class="recommend_content"><div class="content-text 0 _ vpd" onclick="myFunction(this)"><div class="recommend_text ">Kí túc xá B5</div>  </div> </div><div class="recommend_content" style="margin-top:12px"><div class="content-text 1 a2 tang9 khoa_cntt1" onclick="myFunction(this)"><div class="recommend_text ">Khoa Công nghệ thông tin</div>  </div> </div><div class="recommend_content"> <div class="content-text 1 a1 tang1 phong_gv" onclick="myFunction(this)"><div class="recommend_text">Phòng Giáo Vụ</div></div> </div><div class="recommend_content"><div class="content-text 1 a1 tang1 khoa_dpt" onclick="myFunction(this)">             <div class="recommend_text" >Khoa Đa phương tiện</div>  </div> </div>')
             } 
         });
     });
@@ -983,8 +1065,30 @@ $( "#input_search").focus(function() {
             $('#dialog_clb').removeClass('active')
             isShowClb=0
         }
+        
+        if (current_khoa == 'graduation_timeline') {
+            $('#dialog_timeline').addClass('active');
+            $('#black_bg_timeline').addClass('active');
+            return;
+        }
+
         $('.'+current_khoa).css( {'display': 'block'});
         $('.'+current_khoa).parent().css( {'z-index': 18});
+        $('.'+current_khoa).siblings('.effect').show();
+        // Hide effect after some time to avoid cluttering
+        setTimeout(() => {
+            $('.'+current_khoa).siblings('.effect').fadeOut();
+        }, 5000);
+    });
+
+    $('.close_btn_timeline').click(function() {
+        $('#dialog_timeline').removeClass('active');
+        $('#black_bg_timeline').removeClass('active');
+    });
+
+    $('#black_bg_timeline').click(function() {
+        $('#dialog_timeline').removeClass('active');
+        $('#black_bg_timeline').removeClass('active');
     });
 
     $(".btn-a2").click(function() {
