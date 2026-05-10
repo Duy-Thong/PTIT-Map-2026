@@ -314,17 +314,20 @@
         display: none;
         position: absolute;
         transform: translate(-50%, -50%);
+        top: 0;
+        left: 0;
     }
     .over .effect span {
         position: absolute;
-        width: 20px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
         border: 4px #fff solid;
         opacity: 0;
         border-radius: 50%;
         animation: 2s infinite aniWave;
-        left: -10px;
-        top: -10px;
+        left: 0;
+        top: 0;
+        transform: translate(-50%, -50%);
     }
     .over .pop {
         position: absolute;
@@ -338,6 +341,22 @@
     }
     .over:hover .pop {
         transform: scale(1.1);
+    }
+    @keyframes aniWave {
+        0% {
+            transform: translate(-50%, -50%) scale(0.5);
+            opacity: 0;
+        }
+
+        5% {
+            transform: translate(-50%, -50%) scale(0.5);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translate(-50%, -50%) scale(2);
+            opacity: 0;
+        }
     }
     .pop img {
         height: 64px;
@@ -366,8 +385,8 @@
         bottom: 51.5%;
     }
     #floor-vpmc {
-        left: 75%;
-        bottom: 0%;
+        left: 70%;
+        bottom: 4%;
     }
     #floor-hta1 {
         left: 34%;
@@ -390,13 +409,13 @@
         bottom: 62.5%;
     }
     #floor-parking{
-        left: 30%;
-        bottom: 1%;
+        left: 35%;
+        bottom: 5%;
     }
     .typewriter {
         position: absolute;
         transform: translate(-50%, -100%);
-        bottom: 5px;
+        bottom: 8px;
         background: rgba(255,255,255,0.6);
         padding: 8px 12px;
         border-radius: 10px;
@@ -1635,13 +1654,13 @@
     $('#floor-a1').css({'left': '49%','bottom': '11%',})
     $('#floor-a2').css( {'left': '65%','bottom': '35.5%',})
     $('#floor-a3').css( {'left': '73%','bottom': '51.5%',})
-    $('#floor-vpmc').css( {'left': '75%','bottom': '0%',})
+    $('#floor-vpmc').css( {'left': '70%','bottom': '4%',})
     $('#floor-hta1').css( {'left': '34%','bottom': '26.5%',})
     $('#floor-hta2').css( {'left': '53%','bottom': '23%',})
     $('#floor-canteen').css( {'left': '50%','bottom': '52.5%',})
     $('#floor-ktxb5').css( {'left': '23%','bottom': '40.5%',})
     $('#floor-ttkn').css( {'left': '47%','bottom': '62.5%',})
-    $('#floor-parking').css( {'left': '30%','bottom': '1%',})
+    $('#floor-parking').css( {'left': '35%','bottom': '5%',})
       $('#loader').show();
     $('#web').hide();
     window.onload = function() {
