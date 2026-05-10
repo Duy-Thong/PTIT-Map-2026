@@ -6,7 +6,7 @@ The current map menu is generalized for all university activities. To better ser
 
 - **Menu Refactor**: 
     - Remove 3 existing tabs: "Khối phòng ban", "Đào tạo nghiên cứu", "Tiện ích sinh viên".
-    - Keep the "Tham quan học viện" tab.
+    - Keep the "Thăm quan học viện" tab.
     - Add a new "Dự lễ tốt nghiệp" tab with localized icons and interactive items.
 - **Map Interaction**: 
     - Implement navigation logic: Clicking a graduation item will pan the map to the target location and trigger its popup.
