@@ -162,7 +162,7 @@
     .parent-menu-content{
         width: 100%;
         height: 80%;
-        overflow-x: auto;
+        overflow-y: auto;
     }
     .menu-content-bottom {
         width: 100%;
@@ -311,7 +311,7 @@
         cursor: pointer;
     }
     .over .effect {
-        display: none !important;
+        display: none;
         position: relative;
         z-index: 1;
     }
@@ -547,6 +547,27 @@
         top:-8px;
         bottom: 0;
     }
+    .btn-view-details {
+        background-color: #E23C47;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+    }
+    .title-floor {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+    }
     </style>
 <body style="overflow: hidden;">
 <!-- Google Tag Manager (noscript) -->
@@ -573,61 +594,7 @@
       <p style="margin-top:20px;font-size: 14px;line-height: 20px;text-align: center;color: #39476A;">Đang tải dữ liệu...</p>
   </div>
 
-  <!------------------- Frame Search------------------------------- -->
-        <div class="modal-content" id="modal_search" style="width:100%;height:100%;overflow: hidden;display: none;background-color: #F3F5F9;margin: 0;">
-           <div class="header_back">
-              <div class="icon_back">
-                <img id="btn-close-search"  src="./static/images/home/home-btn-back.svg" alt="back" width="24px" height="24px">
-              </div>
-              <div class="text_back">Tìm kiếm</div>
-           </div>
-           <div class="content-place" style="background-color: white;height: 16vw;margin-right: 4vw;">
-            <svg style="margin-left:4vw" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M22.9666 19.7002L19.6999 16.4335C20.7499 14.8002 21.3333 12.9335 21.3333 10.8335C21.3333 5.00016 16.6666 0.333496 10.8333 0.333496C4.99992 0.333496 0.333252 5.00016 0.333252 10.8335C0.333252 16.6668 4.99992 21.3335 10.8333 21.3335C12.9333 21.3335 14.7999 20.7502 16.4333 19.7002L19.6999 22.9668C20.6333 23.9002 22.0333 23.9002 22.9666 22.9668C23.8999 22.0335 23.8999 20.6335 22.9666 19.7002ZM10.8333 19.0002C6.28325 19.0002 2.66659 15.3835 2.66659 10.8335C2.66659 6.2835 6.28325 2.66683 10.8333 2.66683C15.3833 2.66683 18.9999 6.2835 18.9999 10.8335C18.9999 15.3835 15.3833 19.0002 10.8333 19.0002Z" fill="url(#paint0_linear)"/>
-              <path d="M14.3332 7.3335H7.33317C6.63317 7.3335 6.1665 7.91683 6.1665 8.50016C6.1665 9.20016 6.63317 9.66683 7.33317 9.66683H14.3332C15.0332 9.66683 15.4998 9.20016 15.4998 8.50016C15.4998 7.91683 15.0332 7.3335 14.3332 7.3335Z" fill="url(#paint1_linear)"/>
-              <path d="M10.8332 12H7.33317C6.63317 12 6.1665 12.4667 6.1665 13.1667C6.1665 13.8667 6.63317 14.3333 7.33317 14.3333H10.8332C11.5332 14.3333 11.9998 13.8667 11.9998 13.1667C11.9998 12.5833 11.5332 12 10.8332 12Z" fill="url(#paint2_linear)"/>
-              <defs>
-              <linearGradient id="paint0_linear" x1="11.9999" y1="0.333496" x2="11.9999" y2="23.6668" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#FF8989"/>
-              <stop offset="1" stop-color="#FA5252"/>
-              </linearGradient>
-              <linearGradient id="paint1_linear" x1="10.8332" y1="7.3335" x2="10.8332" y2="9.66683" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#FF8989"/>
-              <stop offset="1" stop-color="#FA5252"/>
-              </linearGradient>
-              <linearGradient id="paint2_linear" x1="9.08317" y1="12" x2="9.08317" y2="14.3333" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#FF8989"/>
-              <stop offset="1" stop-color="#FA5252"/>
-              </linearGradient>
-              </defs>
-              </svg>                  
-            <input 
-                type="text" id="input_search"
-                placeholder="Tìm địa chỉ phòng ban, khoa" 
-                onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Tìm địa chỉ phòng ban, khoa'" autofocus />
-          
-         </div>
-         <div id="under_search1"style="height: 1px;background: #E4E9F2;margin-left: 4.8vw;margin-right: 4.8vw;"></div>
-         <div class="search_recommend" id="result">
-            <div class="recommend_content" style="margin-top:12px">
-              <div class="content-text 1 a2 tang9 khoa_cntt1" onclick="myFunction(this)">     
-                  <div class="recommend_text ">Khoa Công nghệ thông tin</div> 
-              </div>
-            </div>
-            <div class="recommend_content">
-              <div class="content-text 1 a1 tang1 phong_gv" onclick="myFunction(this)">
-                  <div class="recommend_text">Phòng Giáo Vụ</div>
-              </div>
-            </div>
-            <div class="recommend_content">
-              <div class="content-text 1 a1 tang1 khoa_dpt" onclick="myFunction(this)">            
-                <div class="recommend_text" >Khoa Đa phương tiện</div> 
-              </div>
-            </div>
-          </div>      
-          <div class="black-bg" style="width:100vw;height:100vh;overflow:hidden;z-index: 1;"></div>
-      </div>
+
 
   <!-- -----------------------Web -------------------------------->
   <div id="web" style="display: none;z-index:1000;overflow: hidden;width: 100%;height: 100%; "> 
@@ -636,7 +603,7 @@
         <div class="header_back">
             <div class="icon_back"></div>
             <div></div>
-            <div class="icon-search-header">
+            <div class="icon-search-header" style="visibility: hidden;">
                 <img src="./static/images/home/btn-search.svg" alt="" width="24px" height="24px">
             </div>
         </div>
@@ -1059,7 +1026,7 @@
                     <div class="descrip-content">
                         Toà nhà A2
                     </div>
-                    <img class="next-btn-map a2" src="./static/images/map/icon/next-in-map.svg" alt="">
+                    <button class="btn-view-details next-btn-map a2">Xem chi tiết</button>
                 </div>
                 <div  class="parent-menu-content">
                     <div class="description-floor end-content">
@@ -1075,7 +1042,7 @@
                     <div class="descrip-content">
                         Toà nhà A1
                     </div>
-                    <img class="next-btn-map a1" src="./static/images/map/icon/next-in-map.svg" alt="">
+                    <button class="btn-view-details next-btn-map a1">Xem chi tiết</button>
                 </div>
                 <div  class="parent-menu-content">
                     <div class="description-floor end-content">
@@ -1089,7 +1056,7 @@
                     <div class="descrip-content">
                         Toà nhà A3
                     </div>
-                    <img class="next-btn-map a3" src="./static/images/map/icon/next-in-map.svg" alt="">
+                    <button class="btn-view-details next-btn-map a3">Xem chi tiết</button>
                 </div>
                 <div  class="parent-menu-content">
                     <div class="description-floor end-content">
@@ -1103,7 +1070,7 @@
                     <div class="descrip-content">
                         Văn phòng một cửa
                     </div>
-                    <img class="next-btn-map vpmc" src="./static/images/map/icon/next-in-map.svg" alt="">
+                    <button class="btn-view-details next-btn-map vpmc">Xem chi tiết</button>
                 </div>
                 <div  class="parent-menu-content">
                     <div class="description-floor end-content">
@@ -1150,12 +1117,12 @@
                     Thông qua hoạt động của đơn vị, góp phần thực hiện nhiệm vụ hỗ trợ Học viện giải quyết các công việc đoàn vụ hằng ngày; là cầu nối hoạt động giữa Văn phòng Đoàn thanh niên với các đơn vị: Hội sinh viên, các LCĐ và các CLB, Tổ, Đội, Nhóm...                </div>
             </div>
         </div>
-        <div class="content-bottom content-map trangcon tttttv"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Trung tâm thông tin thư viện</div><div><img class="next-to-floor 1 a3 tang1 tttttv" src="./static/images/map/icon/next-in-map.svg" alt="" style="display: block;"></div></div><div  class="parent-menu-content"><div class="description-floor end-content">
+        <div class="content-bottom content-map trangcon tttttv"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Trung tâm thông tin thư viện</div><div><button class="btn-view-details next-to-floor 1 a3 tang1 tttttv">Xem chi tiết</button></div></div><div  class="parent-menu-content"><div class="description-floor end-content">
             Chức năng và nhiệm vụ: Trung tâm có chức năng quản lý chuyên môn, nghiệp vụ về thông tin – thư viện trong toàn Học viện; tổ chức và quản lý công tác thông tin – thư viện phục vụ hoạt động đào tạo và nghiên cứu khoa học tại Cơ sở Hà Đông.
         </div></div></div>
 
-        <div class="content-bottom content-map trangcon phong_dt"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Phòng Đào tạo</div><div><img class="next-to-floor 1 a1 tang2 phong_dt" src="./static/images/map/icon/next-in-map.svg" alt="" style="display: block;"></div></div><div  class="parent-menu-content"><div class="description-floor end-content"> Vị trí: Tầng 2 nhà A1, Phòng đào tạo có chức năng tổ chức, quản lý, điều hành công tác mở  ngành đào tạo...</div></div></div>
-        <div class="content-bottom content-map trangcon phong_ctctsv"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Phòng chính trị & CTSV</div><div><img class="next-to-floor 1 a1 tang1 phong_ctctsv" src="./static/images/map/icon/next-in-map.svg" alt="" style="display: block;"></div></div><div  class="parent-menu-content"><div class="description-floor end-content">Vị trí: Tầng 1 nhà A1, Phòng chính trị & CTSV có chức năng tổ chức triển khai thực hiện, giám sát, kiểm tra, tổng hợp, đánh giá kết quả, tình hình hoạt động của các mặt công tác nêu trên theo nhiệm vụ được giao. </div></div></div>
+        <div class="content-bottom content-map trangcon phong_dt"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Phòng Đào tạo</div><div><button class="btn-view-details next-to-floor 1 a1 tang2 phong_dt">Xem chi tiết</button></div></div><div  class="parent-menu-content"><div class="description-floor end-content"> Vị trí: Tầng 2 nhà A1, Phòng đào tạo có chức năng tổ chức, quản lý, điều hành công tác mở  ngành đào tạo...</div></div></div>
+        <div class="content-bottom content-map trangcon phong_ctctsv"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Phòng chính trị & CTSV</div><div><button class="btn-view-details next-to-floor 1 a1 tang1 phong_ctctsv">Xem chi tiết</button></div></div><div  class="parent-menu-content"><div class="description-floor end-content">Vị trí: Tầng 1 nhà A1, Phòng chính trị & CTSV có chức năng tổ chức triển khai thực hiện, giám sát, kiểm tra, tổng hợp, đánh giá kết quả, tình hình hoạt động của các mặt công tác nêu trên theo nhiệm vụ được giao. </div></div></div>
         <div class="content-bottom content-map trangcon khoa_qtdtsdh"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Khoa Đào tạo sau Đại học</div><div><img class="next-to-floor 1 a2 tang10 khoa_qtdtsdh" src="./static/images/map/icon/next-in-map.svg" alt="" style="display: block;"></div></div><div  class="parent-menu-content"><div class="description-floor end-content">Vị trí: Tầng 10 nhà A2, Khoa QT&ĐTSĐH có chức năng tổ chức đào tạo sau đại học cấp thạc sĩ và tiến sĩ.</div></div></div>
         <div class="content-bottom content-map trangcon phong_tckt"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Phòng Tài chính Kế toán</div><div><img class="next-to-floor 1 a2 tang10 khoa_tckt" src="./static/images/map/icon/next-in-map.svg" alt="" style="display: block;"></div></div><div  class="parent-menu-content"><div class="description-floor end-content">Vị trí: Tầng 1 nhà A1, Phòng Tài chính kế toán thực hiện thu học phí, lệ phí và các khoản thu khác;  thanh toán các khoản chi theo chế độ quy định. </div></div></div>
         <div class="content-bottom content-map trangcon phong_qlkhcn"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Phòng Quản lý KHCN & HTQT</div><div><img class="next-to-floor 1 a1 tang2 phong_qlkhcn" src="./static/images/map/icon/next-in-map.svg" alt="" style="display: block;"></div></div><div  class="parent-menu-content"><div class="description-floor end-content">Vị trí: Tầng 2 nhà A1, Phòng Quản lý Khoa học công nghệ & HTQT có chức năng tổ chức triển khai thực hiện, giám sát, kiểm tra, tổng hợp, đánh giá hoạt động khoa học công nghệ và hợp tác quốc tế theo nhiệm vụ được giao. </div></div></div>
@@ -1183,7 +1150,7 @@
         <div class="content-bottom content-map trangcon khoa_cb1"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Khoa Cơ bản 1</div><div>
             <img class="next-to-floor 1 a2 tang10 khoa_cb1" src="./static/images/map/icon/next-in-map.svg" alt="" style="display: block;">
         </div></div><div  class="parent-menu-content"><div class="description-floor end-content">Khoa Cơ bản 1 là đơn vị đào tạo trực thuộc Học viện, có chức năng đào tạo và nghiên cứu khoa học thuộc lĩnh vực khoa học cơ bản, Ngoại ngữ và Giáo dục thể chất – Quốc phòng.</div></div></div>
-        <div class="content-bottom content-map trangcon khoa_cntt1"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Khoa Công nghệ thông tin 1</div><div><img class="next-to-floor 1 a2 tang9 khoa_cntt1" src="./static/images/map/icon/next-in-map.svg" alt="" style="display: block;"></div></div><div  class="parent-menu-content"><div class="description-floor end-content">Khoa Công nghệ thông tin 1 là đơn vị đào tạo trực thuộc Học viện, có chức năng đào tạo và nghiên cứu khoa học thuộc lĩnh vực Công nghệ thông tin </div></div></div>
+        <div class="content-bottom content-map trangcon khoa_cntt1"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Khoa Công nghệ thông tin 1</div><div><button class="btn-view-details next-to-floor 1 a2 tang9 khoa_cntt1">Xem chi tiết</button></div></div><div  class="parent-menu-content"><div class="description-floor end-content">Khoa Công nghệ thông tin 1 là đơn vị đào tạo trực thuộc Học viện, có chức năng đào tạo và nghiên cứu khoa học thuộc lĩnh vực Công nghệ thông tin </div></div></div>
         <div class="content-bottom content-map trangcon khoa_vt1"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Khoa Viễn thông 1</div><div><img class="next-to-floor 1 a2 tang10 khoa_vt1" src="./static/images/map/icon/next-in-map.svg" alt="" style="display: block;"></div></div><div  class="parent-menu-content"><div class="description-floor end-content">Khoa Viễn thông 1 là đơn vị đào tạo trực thuộc Học viện, có chức năng đào tạo và nghiên cứu khoa học thuộc lĩnh vực điện tử truyền thông.</div></div></div>      
         <div class="content-bottom content-map trangcon khoa_ktdt1"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Khoa Kỹ thuật Điện tử 1</div><div><img class="next-to-floor 1 a2 tang9 khoa_ktdt1" src="./static/images/map/icon/next-in-map.svg" alt="" style="display: block;"></div></div><div  class="parent-menu-content"><div class="description-floor end-content">Khoa Kỹ thuật Điện tử 1 là đơn vị đào tạo trực thuộc Học viện, có chức năng đào tạo và nghiên cứu khoa học thuộc lĩnh vực Điện – Điện tử. </div></div></div>      
         <div class="content-bottom content-map trangcon khoa_qtkd1"><div class="title-content-bottom title-floor"> <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt=""> <div class="descrip-content">Khoa quản trị kinh doanh 1</div><div><img class="next-to-floor 1 a2 tang9 khoa_qtkd1" src="./static/images/map/icon/next-in-map.svg" alt="" style="display: block;"></div></div><div  class="parent-menu-content"><div class="description-floor end-content">Khoa Quản trị kinh doanh 1 là đơn vị đào tạo trực thuộc Học viện, có chức năng đào tạo và nghiên cứu khoa học thuộc lĩnh vực quản trị kinh doanh. </div></div></div>
@@ -1308,7 +1275,7 @@
             <div class="parent-menu-content">
                 <div class="description-floor end-content" style="padding: 10px 0;">
                     <div style="font-weight: 600; font-size: 14px; color: #E23C47; margin-bottom: 10px; padding: 0 20px;">Thứ Bảy, ngày 23/05 | 07:00 – 11:30 | Hội trường A2</div>
-                    <div style="max-height: 40vh; overflow-y: auto; padding: 0 10px 0 20px;">
+                    <div style="padding: 0 10px 80px 20px;">
                         <div class="timeline_item">
                             <div class="timeline_time">07:00-08:00</div>
                             <div class="timeline_dot"></div>
@@ -1405,7 +1372,7 @@
             <div class="title-content-bottom title-floor"> 
                 <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt="">
                 <div class="descrip-content">Hội trường lễ tốt nghiệp</div>
-                <img class="next-btn-map a2" src="./static/images/map/icon/next-in-map.svg" alt="">
+                <button class="btn-view-details next-btn-map a2">Xem chi tiết</button>
             </div>
             <div class="parent-menu-content">
                 <div class="description-floor end-content">
@@ -1418,7 +1385,7 @@
             <div class="title-content-bottom title-floor"> 
                 <img class="back-btn-map" src="./static/images/map/icon/btn-back.svg" alt="">
                 <div class="descrip-content">Theo dõi lễ tốt nghiệp</div>
-                <img class="next-btn-map a2" src="./static/images/map/icon/next-in-map.svg" alt="">
+                <button class="btn-view-details next-btn-map a2">Xem chi tiết</button>
             </div>
             <div class="parent-menu-content">
                 <div class="description-floor end-content">
