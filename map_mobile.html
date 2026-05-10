@@ -363,44 +363,44 @@
         z-index: 16;
     }
     #floor-a1 {
-        margin-left: 45vw;
-        margin-bottom: 17.5vw;
+        margin-left: 49vw;
+        margin-bottom: 13.5vw;
     }
     #floor-a2 {
-        margin-left: 82vw;
-        margin-bottom: 50.5vw;
+        margin-left: 62vw;
+        margin-bottom: 38.5vw;
     }
     #floor-a3 {
-        margin-left: 72vw;
-        margin-bottom: 67.5vw;
+        margin-left: 76vw;
+        margin-bottom: 51.5vw;
     }
     #floor-vpmc {
-        margin-left: 85vw;
-        margin-bottom: 2.5vw;
+        margin-left: 83vw;
+        margin-bottom: 0.5vw;
     }
     #floor-hta1 {
-        margin-left: 27vw;
-        margin-bottom: 34.5vw;
+        margin-left: 34vw;
+        margin-bottom: 26.5vw;
     }
     #floor-hta2 {
         margin-left: 53vw;
-        margin-bottom: 31.5vw;
+        margin-bottom: 25.5vw;
     }
     #floor-canteen {
-        margin-left: 53vw;
-        margin-bottom: 63.5vw;
+        margin-left: 50vw;
+        margin-bottom: 52.5vw;
     }
     #floor-ktxb5 {
-        margin-left: 18vw;
-        margin-bottom: 54.5vw;
+        margin-left: 23vw;
+        margin-bottom: 40.5vw;
     }
     #floor-ttkn{
         margin-left: 47vw;
-        margin-bottom: 74.5vw;
+        margin-bottom: 62.5vw;
     }
     #floor-parking{
-        margin-left: 15vw;
-        margin-bottom: 10vw;
+        margin-left: 25vw;
+        margin-bottom: 8vw;
     }
     .input-search-header,.input-search-header input{
         height: 40px;
@@ -1591,21 +1591,17 @@
     var delayTime = 6000;
 
     var tile_mh=$(window).height()/$(window).width()
-    if(tile_mh<2){
-        $('.map').css( {'background': 'url(./static/images/map/map_mobile.png) no-repeat bottom'});
-        $('.map').css({'background-size':'100vw auto'});
-        $('#floor-a1').css({'margin-left': '49vw','margin-bottom': '13.5vw',})
-        $('#floor-a2').css( {'margin-left': '62vw','margin-bottom': '38.5vw',})
-        $('#floor-a3').css( {'margin-left': '76vw','margin-bottom': '51.5vw',})
-        $('#floor-vpmc').css( {'margin-left': '83vw','margin-bottom': '0.5vw',})
-        $('#floor-hta1').css( {'margin-left': '34vw','margin-bottom': '26.5vw',})
-        $('#floor-hta2').css( {'margin-left': '53vw','margin-bottom': '25.5vw',})
-        $('#floor-canteen').css( {'margin-left': '50vw','margin-bottom': '52.5vw',})
-        $('#floor-ktxb5').css( {'margin-left': '23vw','margin-bottom': '40.5vw',})
-        $('#floor-ttkn').css( {'margin-left': '47vw','margin-bottom': '62.5vw',})
-        $('#floor-parking').css( {'margin-left': '25vw','margin-bottom': '8vw',})
-
-    }
+    $('.map').css({'background-size':'100vw auto'});
+    $('#floor-a1').css({'margin-left': '49vw','margin-bottom': '13.5vw',})
+    $('#floor-a2').css( {'margin-left': '62vw','margin-bottom': '38.5vw',})
+    $('#floor-a3').css( {'margin-left': '76vw','margin-bottom': '51.5vw',})
+    $('#floor-vpmc').css( {'margin-left': '83vw','margin-bottom': '0.5vw',})
+    $('#floor-hta1').css( {'margin-left': '34vw','margin-bottom': '26.5vw',})
+    $('#floor-hta2').css( {'margin-left': '53vw','margin-bottom': '25.5vw',})
+    $('#floor-canteen').css( {'margin-left': '50vw','margin-bottom': '52.5vw',})
+    $('#floor-ktxb5').css( {'margin-left': '23vw','margin-bottom': '40.5vw',})
+    $('#floor-ttkn').css( {'margin-left': '47vw','margin-bottom': '62.5vw',})
+    $('#floor-parking').css( {'margin-left': '25vw','margin-bottom': '8vw',})
       $('#loader').show();
     $('#web').hide();
     window.onload = function() {
