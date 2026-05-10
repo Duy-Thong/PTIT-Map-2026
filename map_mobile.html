@@ -568,6 +568,50 @@
         justify-content: space-between;
         padding: 0 16px;
     }
+    .session-selector {
+        display: flex;
+        gap: 10px;
+        padding: 0 20px 15px;
+    }
+    .session-selector .btn-session {
+        flex: 1;
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid #E23C47;
+        background: transparent;
+        color: #E23C47;
+        font-weight: 600;
+        font-size: 13px;
+        transition: all 0.3s;
+    }
+    .session-selector .btn-session.active {
+        background: #E23C47;
+        color: white;
+    }
+    .timeline-subtitle {
+        font-size: 12px;
+        color: #666;
+        padding: 0 20px;
+        margin-bottom: 5px;
+        line-height: 1.4;
+    }
+    .timeline-muon-le-phuc {
+        background: #fdf2f2;
+        padding: 10px 20px;
+        margin: 0 20px 15px;
+        border-radius: 8px;
+        border-left: 4px solid #E23C47;
+    }
+    .timeline-muon-le-phuc .le-phuc-title {
+        font-weight: 600;
+        font-size: 13px;
+        color: #E23C47;
+        margin-bottom: 4px;
+    }
+    .timeline-muon-le-phuc .le-phuc-desc {
+        font-size: 12px;
+        color: #444;
+    }
     </style>
 <body style="overflow: hidden;">
 <!-- Google Tag Manager (noscript) -->
@@ -1273,82 +1317,164 @@
             </div>
             <div class="parent-menu-content">
                 <div class="description-floor end-content" style="padding: 10px 0;">
-                    <div style="font-weight: 600; font-size: 14px; color: #E23C47; margin-bottom: 10px; padding: 0 20px;">Thứ Bảy, ngày 23/05 | 07:00 – 11:30 | Hội trường A2</div>
-                    <div style="padding: 0 10px 80px 20px;">
-                        <div class="timeline_item">
-                            <div class="timeline_time">07:00-08:00</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Đón tiếp học viên, sinh viên, người nhà.</div>
+                    <!-- Session Selector -->
+                    <div class="session-selector">
+                        <button class="btn-session active" onclick="switchSession('morning')">Sáng (23/5)</button>
+                        <button class="btn-session" onclick="switchSession('afternoon')">Chiều (23/5)</button>
+                    </div>
+
+                    <!-- Morning Session -->
+                    <div id="session-morning">
+                        <div style="font-weight: 600; font-size: 14px; color: #E23C47; margin-bottom: 5px; padding: 0 20px;">LỄ TỐT NGHIỆP NĂM 2026 – ĐỢT 1</div>
+                        <div class="timeline-subtitle">Dành cho Tiến sĩ, thạc sỹ, kỹ sư các ngành CNTT</div>
+                        <div style="font-size: 13px; font-weight: 500; padding: 0 20px; margin-bottom: 15px;">Thời gian: 07:00 – 11:30 | Hội trường A2</div>
+                        
+                        <div style="padding: 0 10px 80px 20px;">
+                            <div class="timeline_item">
+                                <div class="timeline_time">07:00-08:00</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Đón tiếp học viên, sinh viên, người nhà. Ổn định hội trường</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">08:00-08:15</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Đón tiếp đại biểu</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">08:15-08:30</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Văn nghệ chào mừng</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">08:30-08:35</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Chào cờ, tuyên bố lý do, giới thiệu đại biểu</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">08:35-08:45</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Phát biểu chúc mừng của Lãnh đạo Học viện</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">08:45-08:50</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Công bố các quyết định cấp bằng tốt nghiệp và công nhận học vị</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">08:50-08:55</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Đại diện tân Tiến sĩ, Thạc sĩ tặng hoa Học viện</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">08:55-09:00</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Trao bằng cho các tân Tiến sĩ</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">09:00-09:15</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Trao bằng cho các tân Thạc sĩ</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">09:15-09:25</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Video tổng kết khoá học D21 khối các ngành kỹ thuật</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">09:25-09:30</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Đại diện tân Kỹ sư được nhận bằng phát biểu</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">09:30-09:40</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Nghi thức tri ân Nhà trường và Gia đình</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">09:40-09:50</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Trao bằng, giấy khen, kỷ niệm chương cho các tân kỹ sư ngành CNTT</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">09:50-11:30</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Trao bằng cho các tân Kỹ sư</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">11:30</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Bế mạc.</div>
+                            </div>
                         </div>
-                        <div class="timeline_item">
-                            <div class="timeline_time">08:00-08:15</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Đón tiếp đại biểu</div>
-                        </div>
-                        <div class="timeline_item">
-                            <div class="timeline_time">08:15-08:30</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Văn nghệ chào mừng</div>
-                        </div>
-                        <div class="timeline_item">
-                            <div class="timeline_time">08:30-08:35</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Chào cờ, tuyên bố lý do, giới thiệu đại biểu</div>
-                        </div>
-                        <div class="timeline_item">
-                            <div class="timeline_time">08:35-08:45</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Phát biểu chúc mừng của Lãnh đạo Học viện</div>
-                        </div>
-                        <div class="timeline_item">
-                            <div class="timeline_time">08:45-08:50</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Công bố các quyết định cấp bằng tốt nghiệp và công nhận học vị</div>
-                        </div>
-                        <div class="timeline_item">
-                            <div class="timeline_time">08:50-08:55</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Đại diện tân Tiến sĩ, Thạc sĩ tặng hoa Học viện</div>
-                        </div>
-                        <div class="timeline_item">
-                            <div class="timeline_time">08:55-09:00</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Trao bằng cho các tân Tiến sĩ</div>
-                        </div>
-                        <div class="timeline_item">
-                            <div class="timeline_time">09:00-09:15</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Trao bằng cho các tân Thạc sĩ</div>
-                        </div>
-                        <div class="timeline_item">
-                            <div class="timeline_time">09:15-09:25</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Video tổng kết khoá học D21 khối các ngành kỹ thuật</div>
-                        </div>
-                        <div class="timeline_item">
-                            <div class="timeline_time">09:25-09:30</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Đại diện tân Kỹ sư được nhận bằng phát biểu</div>
-                        </div>
-                        <div class="timeline_item">
-                            <div class="timeline_time">09:30-09:40</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Nghi thức tri ân Nhà trường và Gia đình</div>
-                        </div>
-                        <div class="timeline_item">
-                            <div class="timeline_time">09:40-09:50</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Trao bằng, giấy khen, kỷ niệm chương cho các tân kỹ sư ngành CNTT</div>
-                        </div>
-                        <div class="timeline_item">
-                            <div class="timeline_time">09:50-11:30</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Trao bằng cho các tân Kỹ sư</div>
-                        </div>
-                        <div class="timeline_item">
-                            <div class="timeline_time">11:30</div>
-                            <div class="timeline_dot"></div>
-                            <div class="timeline_desc">Bế mạc.</div>
+                    </div>
+
+                    <!-- Afternoon Session -->
+                    <div id="session-afternoon" style="display: none;">
+                        <div style="font-weight: 600; font-size: 14px; color: #E23C47; margin-bottom: 5px; padding: 0 20px;">LỄ TỐT NGHIỆP NĂM 2026 – ĐỢT 1</div>
+                        <div class="timeline-subtitle">Kỹ sư các ngành ATTT, VT, Điện – điện tử, CN Đa phương tiện</div>
+                        <div style="font-size: 13px; font-weight: 500; padding: 0 20px; margin-bottom: 15px;">Thời gian: 13:00 – 17:00 | Hội trường A2</div>
+
+                        <div style="padding: 0 10px 80px 20px;">
+                            <div class="timeline_item">
+                                <div class="timeline_time">13:00-14:00</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Đón tiếp học viên, sinh viên và người nhà. Ổn định hội trường</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">14:00-14:15</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Đón tiếp đại biểu</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">14:15-14:30</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Văn nghệ chào mừng</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">14:30-14:35</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Chào cờ, tuyên bố lý do, giới thiệu đại biểu</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">14:35-14:40</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Phát biểu chúc mừng của Lãnh đạo Học viện</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">14:40-14:45</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Công bố quyết định cấp bằng tốt nghiệp</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">14:45-14:55</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Video tổng kết khoá học D21 khối các ngành kỹ thuật</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">14:55-15:00</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Đại diện tân Kỹ sư được nhận bằng phát biểu</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">15:00-15:10</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Nghi thức tri ân Nhà trường và Gia đình</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">15:10-15:20</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Trao bằng, giấy khen, kỷ niệm chương cho các tân kỹ sư ngành ATTT, VT, Điện – Điện tử, CN ĐPT</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">15:20-17:00</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Trao bằng cho các tân Kỹ sư</div>
+                            </div>
+                            <div class="timeline_item">
+                                <div class="timeline_time">17:00</div>
+                                <div class="timeline_dot"></div>
+                                <div class="timeline_desc">Bế mạc.</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1446,6 +1572,20 @@
 <script src="./static/js/mobile_scripts.js "></script>
 
 <script>
+    function switchSession(session) {
+        if (session === 'morning') {
+            $('#session-morning').show();
+            $('#session-afternoon').hide();
+            $('.btn-session[onclick*="morning"]').addClass('active');
+            $('.btn-session[onclick*="afternoon"]').removeClass('active');
+        } else {
+            $('#session-morning').hide();
+            $('#session-afternoon').show();
+            $('.btn-session[onclick*="morning"]').removeClass('active');
+            $('.btn-session[onclick*="afternoon"]').addClass('active');
+        }
+    }
+
     var current_zoom=0;
     var id_floor=null;
     var delayTime = 6000;
