@@ -1896,6 +1896,60 @@ ul.tabs li.current {
     display: block;
 }
 
+.session-selector {
+    display: flex;
+    gap: 15px;
+    padding: 0 30px 20px;
+    border-bottom: 1px solid #EDF1F7;
+    margin-bottom: 20px;
+}
+
+.session-selector .btn-session {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #E23C47;
+    background: transparent;
+    color: #E23C47;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.session-selector .btn-session.active {
+    background: #E23C47;
+    color: white;
+}
+
+.timeline-subtitle {
+    font-size: 14px;
+    color: #666;
+    padding: 0 30px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.timeline-muon-le-phuc {
+    background: #fdf2f2;
+    padding: 15px 25px;
+    margin: 0 30px 20px;
+    border-radius: 8px;
+    border-left: 5px solid #E23C47;
+}
+
+.timeline-muon-le-phuc .le-phuc-title {
+    font-weight: 600;
+    font-size: 15px;
+    color: #E23C47;
+    margin-bottom: 6px;
+}
+
+.timeline-muon-le-phuc .le-phuc-desc {
+    font-size: 14px;
+    color: #444;
+}
+
 @media (max-width: 768px) {
     .dialog_timeline {
         width: 90%;
