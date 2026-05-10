@@ -311,7 +311,7 @@
         cursor: pointer;
     }
     .over .effect {
-        display: none;
+        display: none !important;
         position: relative;
         z-index: 1;
     }
@@ -340,6 +340,7 @@
         transition: all .2s;
         -moz-transition: all .2s;
         -webkit-transition: all .2s;
+        opacity: 0; /* Hide the ping icon while keeping its clickable area */
     }
     .over .pop.active {
         transform: scale(1);
@@ -349,6 +350,7 @@
     }
     .pop img {
         height: 64px;
+        opacity: 0;
     }
     .people {
         z-index: 14;

@@ -82,7 +82,7 @@
     
     .left-img-phong {
         width: 100%;
-        height: 100%;
+        flex: 1;
         min-height: 150px;
         display: flex;
         justify-content: center;
@@ -110,15 +110,18 @@
         justify-content: center;
         width: 100%;
         height: 100%;
-        display: flex;
-        align-items: center;
+        display: block; /* Removed flex */
+        position: relative; /* Added relative */
         box-sizing: border-box;
     }
     
     .img-phong img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         object-fit: contain;
-        max-width: 100%;
-        max-height: 100%;
     }
     
     .des-phong {
