@@ -1848,9 +1848,9 @@ $( "#btn-close-search").click(function() {
         let list_typewriter=document.querySelectorAll(".typewriter");
         let list_pop=document.querySelectorAll(".pop");
         for( let i=0;i<list_people.length;i++){
-            list_people[i].className='over people btnFile';
-            list_typewriter[i].className='typewriter';
-            list_pop[i].className='pop';
+            list_people[i].classList.remove('active');
+            list_typewriter[i].classList.remove('active');
+            list_pop[i].classList.remove('active');
             $('.effect').css( {'display': 'none'});
         }
         id_floor=$(this).attr('id')
@@ -1885,9 +1885,9 @@ $( "#btn-close-search").click(function() {
         let list_typewriter=document.querySelectorAll(".typewriter");
         let list_pop=document.querySelectorAll(".pop");
         for( let i=0;i<list_people.length;i++){
-            list_people[i].className='over people btnFile';
-            list_typewriter[i].className='typewriter';
-            list_pop[i].className='pop';
+            list_people[i].classList.remove('active');
+            list_typewriter[i].classList.remove('active');
+            list_pop[i].classList.remove('active');
             $('.effect').css( {'display': 'none'});
         }
 
