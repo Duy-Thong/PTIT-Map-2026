@@ -833,14 +833,14 @@ footer a:hover {
 
 .typewriter {
     display: block;
-    margin-top: -60px;
+    margin-top: -10px;
     position: absolute;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.6);
     padding: 10px;
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    transform: translate(-40%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .title_tooltip {
@@ -1552,50 +1552,7 @@ ul.tabs li.current {
 
 
 
-#floor-a2 {
-    margin-top: -8%;
-    margin-left: 25%;
-}
-
-#floor-a1 {
-    margin-top: 20%;
-    margin-left: -12%;
-}
-
-#floor-a3 {
-    margin-top: -20%;
-    margin-left: 18%;
-}
-
-#floor-hta1 {
-    margin-top: 8%;
-    margin-left: -15%;
-}
-
-#floor-ct {
-    margin-top: -15%;
-    margin-left: 4%;
-}
-
-#floor-b5 {
-    margin-top: -8%;
-    margin-left: -22%;
-}
-
-#floor-b1 {
-    margin-top: -20%;
-    margin-left: -25%;
-}
-
-#floor-vpmc {
-    margin-top: 35%;
-    margin-left: 40%;
-}
-
-#right-slider {
-    margin-top: -10%;
-    margin-left: 36%;
-}
+/* Conflicting floor positions removed */
 
 #left-menu {
     margin-top: -12%;

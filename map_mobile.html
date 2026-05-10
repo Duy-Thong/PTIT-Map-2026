@@ -306,41 +306,32 @@
     }
     .over {
         position: absolute;
-        left: 0;
-        bottom:0;
         cursor: pointer;
+        width: 0;
+        height: 0;
     }
     .over .effect {
         display: none;
-        position: relative;
-        z-index: 1;
+        position: absolute;
+        transform: translate(-50%, -50%);
     }
     .over .effect span {
         position: absolute;
         width: 20px;
         height: 20px;
         border: 4px #fff solid;
-        transform: translate(-50%, -50%);
         opacity: 0;
         border-radius: 50%;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
         animation: 2s infinite aniWave;
-        margin-top: -25px;
-        margin-left: 5px;
-    }
-    .over .effect span:last-child {
-        animation-delay: 0.3s;
+        left: -10px;
+        top: -10px;
     }
     .over .pop {
         position: absolute;
-        transform: scale(0);
-        margin-top: -96px;
-        margin-left: -20px;
+        transform: translate(-50%, -100%) scale(0);
         transition: all .2s;
-        -moz-transition: all .2s;
-        -webkit-transition: all .2s;
-        opacity: 0; /* Hide the ping icon while keeping its clickable area */
+        opacity: 0;
+        bottom: 5px;
     }
     .over .pop.active {
         transform: scale(1);
@@ -362,45 +353,94 @@
      .people.active {
         z-index: 16;
     }
-    #floor-a1 {
-        margin-left: 49vw;
-        margin-bottom: 13.5vw;
+      #floor-a1 {
+        left: 49%;
+        bottom: 11%;
     }
     #floor-a2 {
-        margin-left: 62vw;
-        margin-bottom: 38.5vw;
+        left: 65%;
+        bottom: 35.5%;
     }
     #floor-a3 {
-        margin-left: 76vw;
-        margin-bottom: 51.5vw;
+        left: 73%;
+        bottom: 51.5%;
     }
     #floor-vpmc {
-        margin-left: 83vw;
-        margin-bottom: 0.5vw;
+        left: 75%;
+        bottom: 0%;
     }
     #floor-hta1 {
-        margin-left: 34vw;
-        margin-bottom: 26.5vw;
+        left: 34%;
+        bottom: 26.5%;
     }
     #floor-hta2 {
-        margin-left: 53vw;
-        margin-bottom: 25.5vw;
+        left: 53%;
+        bottom: 23%;
     }
     #floor-canteen {
-        margin-left: 50vw;
-        margin-bottom: 52.5vw;
+        left: 50%;
+        bottom: 52.5%;
     }
     #floor-ktxb5 {
-        margin-left: 23vw;
-        margin-bottom: 40.5vw;
+        left: 23%;
+        bottom: 40.5%;
     }
     #floor-ttkn{
-        margin-left: 47vw;
-        margin-bottom: 62.5vw;
+        left: 47%;
+        bottom: 62.5%;
     }
     #floor-parking{
-        margin-left: 25vw;
-        margin-bottom: 8vw;
+        left: 30%;
+        bottom: 1%;
+    }
+    .typewriter {
+        position: absolute;
+        transform: translate(-50%, -100%);
+        bottom: 5px;
+        background: rgba(255,255,255,0.6);
+        padding: 8px 12px;
+        border-radius: 10px;
+        display: block;
+        box-shadow: 0px 8px 16px rgba(130, 136, 160, 0.1);
+        z-index: 20;
+    }
+    .typewriter-right {
+        transform: translate(-100%, -100%) !important;
+    }
+    .typewriter-left {
+        transform: translate(0, -100%) !important;
+    }
+    .typewriter:before {
+        content: "";
+        position: absolute;
+        left: 48%;
+        bottom: -8px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-top: 8px solid rgba(255, 255, 255, 0.6);
+        border-right: 5px solid transparent;
+        box-shadow: 0px 8px 16px rgba(130, 136, 160, 0.1);
+    }
+    .typewriter h6 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        color: #101426;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: auto;
+        transition: all .2s;
+        -moz-transition: all .2s;
+        -webkit-transition: all .2s;
+    }
+    .typewriter.active {
+        display: block;
+    }
+    .over:hover .typewriter {
+        display: block;
     }
     .input-search-header,.input-search-header input{
         height: 40px;
@@ -685,8 +725,8 @@
             </div>
         </div>
         <div class="over people btnFile" id="floor-vpmc" >
-            <div class="typewriter" style="margin-left: -24px;">
-                <h6>Văn phòng một cửa</h6>
+            <div class="typewriter typewriter-right">
+                <h6>VP1C</h6>
             </div>
             <div class="pop">
                 <img src="./static/images/map/icon_place.svg">
@@ -751,8 +791,8 @@
             </div>
         </div>
         <div class="over people btnFile" id="floor-parking">
-            <div class="typewriter" style="margin-left: -12px;">
-                <h6>Khu vực gửi xe</h6>
+            <div class="typewriter typewriter-left">
+                <h6>Nhà gửi xe</h6>
             </div>
             <div class="pop">
                 <img src="./static/images/map/icon_place.svg">
@@ -1488,7 +1528,7 @@
             </div>
             <div class="parent-menu-content">
                 <div class="description-floor end-content">
-                    Khu vực gửi xe dành cho khách và sinh viên dự lễ. Vui lòng xếp xe gọn gàng theo hướng dẫn của bảo vệ.
+                    Khu vực gửi xe dành cho khách và sinh viên dự lễ. Cổng vào ở đường Nguyễn Trãi, cách cổng chính khoảng 100m, khi vào gửi xe thì vào cổng nhà xe, không vào cổng trường.
                 </div>
             </div>
         </div>
@@ -1592,16 +1632,16 @@
 
     var tile_mh=$(window).height()/$(window).width()
     $('.map').css({'background-size':'100vw auto'});
-    $('#floor-a1').css({'margin-left': '49vw','margin-bottom': '13.5vw',})
-    $('#floor-a2').css( {'margin-left': '62vw','margin-bottom': '38.5vw',})
-    $('#floor-a3').css( {'margin-left': '76vw','margin-bottom': '51.5vw',})
-    $('#floor-vpmc').css( {'margin-left': '83vw','margin-bottom': '0.5vw',})
-    $('#floor-hta1').css( {'margin-left': '34vw','margin-bottom': '26.5vw',})
-    $('#floor-hta2').css( {'margin-left': '53vw','margin-bottom': '25.5vw',})
-    $('#floor-canteen').css( {'margin-left': '50vw','margin-bottom': '52.5vw',})
-    $('#floor-ktxb5').css( {'margin-left': '23vw','margin-bottom': '40.5vw',})
-    $('#floor-ttkn').css( {'margin-left': '47vw','margin-bottom': '62.5vw',})
-    $('#floor-parking').css( {'margin-left': '25vw','margin-bottom': '8vw',})
+    $('#floor-a1').css({'left': '49%','bottom': '11%',})
+    $('#floor-a2').css( {'left': '65%','bottom': '35.5%',})
+    $('#floor-a3').css( {'left': '73%','bottom': '51.5%',})
+    $('#floor-vpmc').css( {'left': '75%','bottom': '0%',})
+    $('#floor-hta1').css( {'left': '34%','bottom': '26.5%',})
+    $('#floor-hta2').css( {'left': '53%','bottom': '23%',})
+    $('#floor-canteen').css( {'left': '50%','bottom': '52.5%',})
+    $('#floor-ktxb5').css( {'left': '23%','bottom': '40.5%',})
+    $('#floor-ttkn').css( {'left': '47%','bottom': '62.5%',})
+    $('#floor-parking').css( {'left': '30%','bottom': '1%',})
       $('#loader').show();
     $('#web').hide();
     window.onload = function() {
