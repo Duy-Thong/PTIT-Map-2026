@@ -105,6 +105,15 @@
         height: calc(100vh - 121.6vw);
         background-color: #FCFDFE;
         z-index: 2;
+        overflow: hidden;
+    }
+    .content-bottom, .trangcon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #FCFDFE;
         overflow-y: auto;
         padding-bottom: 80px;
     }
@@ -1830,6 +1839,7 @@ $( "#btn-close-search").click(function() {
         $('.content-map').css( {'display': 'none'});
         $('.title-menu').css( {'color': '#7988A4'});
         id_menu='.'+$(this).attr('id');
+        $('.content-map').css( {'display': 'none'});
         $(id_menu).css( {'display': 'block'});
        let j=0;
        while(j<list_circle.length){
@@ -1925,17 +1935,16 @@ $( "#btn-close-search").click(function() {
         id_floor=$(this).attr('id');
         setTimeout(function(){ 
             $('.menu-map').css('background-color','#FCFDFE');
+            $('.content-map').css( {'display': 'none'});
             $('.'+id_floor).css( {'display': 'block'});
             $('#'+id_floor).find(".text-container-menu").css( {'color': '#283352'}); 
         }, 200);
     });
 
     $('.back-btn-map').click(function() {
-        console.log(id_floor)
-        $('.typewriter1').remove()
-
-        $('.'+id_floor).css( {'display': 'none'});
-        $(this).parent().parent().css( {'display': 'none'});
+        $('.content-map').css( {'display': 'none'});
+        let current_tab = $('.current-circle').attr('id');
+        $('.' + current_tab).css( {'display': 'block'});
         localStorage.setItem("check_icon",0);
         localStorage.removeItem("key")
     })
