@@ -1536,6 +1536,10 @@ ul.tabs li.current {
     #floor-parking{
         margin-top:22%;margin-left: -38%;
     }
+    #floor-parking-desktop {
+        margin-top: 22%;
+        margin-left: -22%;
+    }
     #left-menu{
         margin-top:-12%;margin-left: -38%;
     }
