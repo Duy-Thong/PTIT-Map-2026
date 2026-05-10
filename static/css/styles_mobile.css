@@ -2128,4 +2128,41 @@ ul.tabs li.current {
 
 .black_bg_timeline.active {
     display: block;
+}.timeline_item {
+    display: flex;
+    margin-bottom: 10px;
+    position: relative;
+}
+.timeline_item::before {
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 24px;
+    bottom: -10px;
+    width: 2px;
+    background: #EDF1F7;
+}
+.timeline_item:last-child::before {
+    display: none;
+}
+.timeline_time {
+    width: 70px;
+    font-weight: 600;
+    color: #E23C47;
+    font-size: 14px;
+    padding-top: 2px;
+}
+.timeline_dot {
+    width: 10px;
+    height: 10px;
+    background: #E23C47;
+    border-radius: 50%;
+    margin: 6px 10px 0 10px;
+    z-index: 1;
+}
+.timeline_desc {
+    flex: 1;
+    font-size: 14px;
+    color: #283352;
+    line-height: 1.5;
 }
